@@ -1,0 +1,16 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body{@apply bg-paper text-primary font-sans font-light antialiased;}
+h1,h2,h3,h4{@apply font-serif font-light leading-tight;}
+.btn{@apply inline-block rounded-full border border-primary px-8 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary transition hover:bg-primary hover:text-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;}
+.lead{@apply text-sm font-semibold uppercase leading-relaxed tracking-[0.14em];}
+.btn-light{@apply inline-block rounded-full border border-brass bg-brass px-8 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary transition hover:bg-paper hover:border-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass;}
+.link{@apply inline-block border-b border-accent pb-1 text-xs uppercase tracking-[0.2em];}
+.script{@apply font-script text-accent;}
+.img{@apply h-full w-full object-cover;}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+@media (min-width:768px){
+  html{scroll-snap-type:y proximity}
+  .screen{min-height:100svh;display:flex;flex-direction:column;justify-content:center;scroll-snap-align:start}
+}
